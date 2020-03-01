@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		首页
+		分类
 	</view>
 </template>
 

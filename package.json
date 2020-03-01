@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "npm run dev:h5",
-    "build": "npm run build:h5",
+    "dev": "npm run dev:mp-weixin",
+    "build": "npm run build:mp-weixin",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
@@ -37,6 +37,7 @@
     "@dcloudio/uni-stat": "^2.0.0-26120200226001",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
+    "uni-simple-router": "^1.5.1",
     "vue": "^2.6.11",
     "vuex": "^3.0.1"
   },
@@ -57,6 +58,7 @@
     "mini-types": "*",
     "miniprogram-api-typings": "^2.8.0-2",
     "postcss-comment": "^2.0.0",
+    "uni-read-pages": "^1.0.4",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [

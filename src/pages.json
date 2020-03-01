@@ -2,15 +2,94 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
+			"name": "index",
+			"meta":{
+                "title": "首页"
+            },
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/classification/index",
+			"name": "classification",
+			"meta":{
+                "title": "分类"
+            },
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/shoppingCart/index",
+			"name": "shoppingCart",
+			"meta":{
+                "title": "购物车"
+            },
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/personal/index",
+			"name": "personal",
+			"meta":{
+                "title": "我的"
+            },
+			"style": {
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
+	"tabBar": {
+        "color": "#d3d5d9",
+        "selectedColor": "#ff4b57",
+        "backgroundColor": "#363f51",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/icon_home.png",
+                "selectedIconPath": "static/icon_home_selected.png"
+            },
+            {
+                "pagePath": "pages/classification/index",
+                "text": "发现",
+                "iconPath": "static/icon_find.png",
+                "selectedIconPath": "static/icon_find_selected.png"
+            },
+            {
+                "pagePath": "pages/shoppingCart/index",
+                "text": "购物车",
+                "iconPath": "static/icon_cart.png",
+                "selectedIconPath": "static/icon_cart_selected.png"
+            },
+            {
+                "pagePath": "pages/personal/index",
+                "text": "我的",
+                "iconPath": "static/icon_mine.png",
+                "selectedIconPath": "static/icon_mine_selected.png"
+            }
+        ]
+    },
+	"condition": { //模式配置，仅开发期间生效
+        "current": 0, //当前激活的模式（list 的索引项）
+        "list": [{
+            "name": "test", //模式名称
+            "path": "pages/index/index" //启动页面，必选
+        }]
+    },
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+		"uni-(.*)": "@/components/uni-$1/uni-$1.vue",
+		"m-(.*)": "@/components/m-$1/index.vue",
+		"(.*)": "@/components/$1.vue"
+		}
 	}
 }

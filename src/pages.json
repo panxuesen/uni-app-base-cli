@@ -53,7 +53,7 @@
             },
             {
                 "pagePath": "pages/classification/index",
-                "text": "发现",
+                "text": "分类",
                 "iconPath": "static/icon_find.png",
                 "selectedIconPath": "static/icon_find_selected.png"
             },

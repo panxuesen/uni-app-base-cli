@@ -3,7 +3,6 @@
 		onLaunch: function() {
 		},
 		onShow: function() {
-			console.log(this)
 		},
 		onHide: function() {
 		}

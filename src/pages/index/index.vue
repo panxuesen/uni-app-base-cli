@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
 		首页
+		<m-text/>
 	</view>
 </template>
 

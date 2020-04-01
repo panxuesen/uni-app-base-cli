@@ -81,3 +81,15 @@ export function formatTime(time, option) {
 		)
 	}
 }
+
+/**
+ * 获取序列化的页面信息，包含页面路径和参数
+ * @returns {string}
+ */
+export function getPage() {
+    const pages = getCurrentPages()
+    const currentPage = pages[pages.length - 1]
+    const url = '/' + currentPage.route
+    const options = currentPage.options
+    return JSON.stringify(Object.assign({ url }, options))
+}

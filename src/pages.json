@@ -84,7 +84,7 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"easycom": {
+	"easycom": { // 此配置作用：组件可直接使用无需引入和注册
 		"autoscan": true,
 		"custom": {
 		"uni-(.*)": "@/components/uni-$1/uni-$1.vue",

@@ -19,5 +19,8 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+	.content {
+		color: $uni-color-primary;
+	}
 </style>

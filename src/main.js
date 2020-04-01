@@ -5,7 +5,7 @@ import router from './router'
 import {RouterMount} from 'uni-simple-router'
 
 Vue.config.productionTip = false
-console.log(process.env)
+
 const app = new Vue({
   mpType: 'app',
   router,

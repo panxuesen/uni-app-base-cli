@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		首页
-		<m-text/>
+		<tojoy-text/>
 	</view>
 </template>
 

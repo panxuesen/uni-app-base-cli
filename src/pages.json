@@ -88,7 +88,7 @@
 		"autoscan": true,
 		"custom": {
 			"uni-(.*)": "@/components/uni-$1/uni-$1.vue",
-			"m-(.*)": "@/components/m-$1/index.vue"
+			"tojoy-(.*)": "@/components/tojoy-$1/index.vue"
 		}
 	}
 }

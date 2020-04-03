@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		首页
+		<web-view src="http://invite.test.yunshang520.com/video"></web-view>
 	</view>
 </template>
 

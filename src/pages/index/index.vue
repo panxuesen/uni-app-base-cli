@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
 		首页
+		<div>11</div>
 		<tojoy-text/>
 	</view>
 </template>
@@ -12,6 +13,9 @@
 			}
 		},
 		onLoad() {
+
+		},
+		created () {
 
 		},
 		methods: {

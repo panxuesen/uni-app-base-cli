@@ -3,8 +3,9 @@ import App from './App'
 import store from './store'
 import router from './router'
 import {RouterMount} from 'uni-simple-router'
+import {COMMON} from '@/common'
 
-Vue.config.productionTip = false
+Vue.use(COMMON)
 
 const app = new Vue({
   mpType: 'app',

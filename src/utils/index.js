@@ -1,3 +1,5 @@
+// 通用性工具方法
+
 /**
  * Parse the time to string
  * @param {(Object|string|number)} time

@@ -12,6 +12,9 @@
 			return {
 			}
 		},
+		onShareAppMessage () {
+			return this.$getShareInfo()
+		},
 		onLoad() {
 
 		},

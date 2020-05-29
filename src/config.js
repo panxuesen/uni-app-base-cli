@@ -1,6 +1,15 @@
 
 let apiUrl, fileUploadUrl, imgUrl
-if (process.env.NODE_ENV === 'development') {
+let ENV = __wxConfig.envVersion
+// "develop"   开发版  
+// "trial"   体验版
+// "release"   正式版
+console.log('小程序运行环境', ENV)
+if (ENV === 'release') {
+    apiUrl = ''
+    fileUploadUrl = ''
+    imgUrl = ''
+} else if (ENV === 'trial') {
     apiUrl = ''
     fileUploadUrl = ''
     imgUrl = ''

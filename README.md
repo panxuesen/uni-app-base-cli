@@ -29,7 +29,7 @@ npm run lint
 - 只要组件命名符合pages.json中easycom的命名规则都无需引入和注册可以直接使用，可以手动修改easycom的命名规则
 
 ### 路由相关
-- 使用了第三方的一个路由拦截的包`uni-simple-router`可以拦截任意页面的跳转包括用户触发的原生tab切换
+- 使用了第三方的一个路由拦截的包`uni-simple-router`
 - 切换页面可以使用router相关api，传参数更加方便
 
 ### UI组件、模版

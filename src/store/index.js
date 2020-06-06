@@ -13,7 +13,7 @@ let initState = JSON.parse(JSON.stringify(state))
 
 let mutations = {
   RESETSTATE (state, data) {
-    state = data
+    state = Object.assign({}, state, data)
   }
 }
 

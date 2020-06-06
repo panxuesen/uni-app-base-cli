@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<web-view src="http://invite.test.yunshang520.com/video"></web-view>
+		购物车
 	</view>
 </template>
 

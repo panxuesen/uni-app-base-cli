@@ -7,17 +7,8 @@
                 "title": "首页"
             },
 			"style": {
-				"navigationBarTitleText": "首页"
-			}
-		},
-		{
-			"path": "pages/classification/index",
-			"name": "classification",
-			"meta":{
-                "title": "分类"
-            },
-			"style": {
-				"navigationBarTitleText": "分类"
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -52,12 +43,6 @@
                 "selectedIconPath": "static/icon_home_selected.png"
             },
             {
-                "pagePath": "pages/classification/index",
-                "text": "分类",
-                "iconPath": "static/icon_find.png",
-                "selectedIconPath": "static/icon_find_selected.png"
-            },
-            {
                 "pagePath": "pages/shoppingCart/index",
                 "text": "购物车",
                 "iconPath": "static/icon_cart.png",
@@ -87,7 +72,9 @@
 	"easycom": { // 此配置作用：组件可直接使用无需引入和注册
 		"autoscan": true,
 		"custom": {
-			"uni-(.*)": "@/components/uni-$1/uni-$1.vue",
+			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+			"tui-(.*)": "thorui-uni/lib/thorui/tui-$1/tui-$1.vue",
+			"uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
 			"tojoy-(.*)": "@/components/tojoy-$1/index.vue"
 		}
 	}

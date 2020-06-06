@@ -1,4 +1,5 @@
 // 通用性业务逻辑-挂载原型
+import {getPayInfo} from '@/request/common'
 
 /**
  * @param {Vue} 
@@ -40,4 +41,55 @@ export function getSystemInfo (Vue) {
     }
     Vue.prototype.$barInfo = barInfo
     return systemInfo
+}
+
+// 获取当前页面信息
+export function getPageInfo() {
+    const pages = getCurrentPages()
+    const currentPage = pages[pages.length - 1]
+    const url = '/' + currentPage.route
+    const options = currentPage.options
+    return Object.assign({ url }, options)
+}
+
+/**
+ * 获取序列化的页面信息，包含页面路径和参数
+ */
+export function getSringPageIngo() {
+    return JSON.stringify(getPageInfo())
+}
+
+// 银联分账支付逻辑
+export function payment(tokenId) {
+    return new Promise((resolve, reject) => {
+        uni.login({
+            success (res) {
+                console.log('wxcode', res)
+                getPayInfo({code: res.code, tokenId}).then(res => {
+                    console.log("获取openid,支付要素", res);
+                    if (res.data.return_code == '0000') {
+                        let payInfo = res.data.miniPayRequest
+                        uni.requestPayment({
+                            timeStamp: payInfo.timeStamp,
+                            nonceStr: payInfo.nonceStr,
+                            package: payInfo.package,
+                            signType: payInfo.signType,
+                            paySign: payInfo.paySign,
+                            success (res) {
+                                console.log('支付成功', res)
+                                resolve(res)
+                            },
+                            fail (res) {
+                                console.log('取消支付', res)
+                            //   reject(res)
+                            }
+                        })
+                    } else {
+                        console.log('支付失败', res)
+                        reject(res)
+                    }
+                })
+            }
+        })
+    })
 }

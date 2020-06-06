@@ -1,7 +1,7 @@
 <template>
-	<view class="content">
-		首页
-	</view>
+	<div class="content">
+		我的
+	</div>
 </template>
 
 <script>

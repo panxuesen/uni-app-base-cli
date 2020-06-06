@@ -4,7 +4,8 @@ import store from './store'
 import router from './router'
 import {RouterMount} from 'uni-simple-router'
 import {COMMON} from '@/common'
-
+import uView from "uview-ui"
+Vue.use(uView)
 // 通用业务逻辑挂载
 Vue.use(COMMON)
 

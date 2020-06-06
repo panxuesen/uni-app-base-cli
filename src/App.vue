@@ -1,9 +1,11 @@
 <script>
 	export default {
 		onLaunch: function() {
+			this.loadFont()
 			this.autoUpdate()
 		},
-		onShow: function() {
+		onShow: function(e) {
+			console.log('APP onShow', e)
 		},
 		onHide: function() {
 		},
@@ -65,11 +67,20 @@
 						content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
 					})
 				}
+			},
+			// 加载字体
+			loadFont () {
+				uni.loadFontFace({
+					family: 'Bitstream Vera Serif Bold',
+					source: 'url("https://6d61-mall-app-becng-1302341807.tcb.qcloud.la/font/DIN%20Alternate%20Bold.ttf?sign=a82434037cd974a533a6f0d93c0eb1d1&t=1591328970")',
+					success: console.log
+				})
 			}
 		},
 	}
 </script>
 
-<style>
+<style lang="scss">
 	/*每个页面公共css */
+	@import "uview-ui/index.scss";
 </style>
